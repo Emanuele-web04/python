@@ -6,7 +6,7 @@
 # just a convention
 class _Private:
     def __init__(self, name) -> None:
-        self. name = name
+        self.name = name
 
 class NotPrivate:
     def __init__(self, name) -> None:
