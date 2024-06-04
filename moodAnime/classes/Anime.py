@@ -1,15 +1,20 @@
  
 # anime class
+
 class Anime:
 
-    def __init__(self, name, hasBeenSeen = 0) -> None:
+    def __init__(self, name: str, seen: bool = False) -> None:
         self.name = name
-        self.hasBeenSeen = hasBeenSeen
+        self.seen = seen
+
+    def getName(self) -> str:
+        return self.name
     
-    # get and set for hasBeenSeen
-    def getStatus(self):
-        return self.hasBeenSeen
+    def getSeen(self) -> bool:
+        return self.seen
     
-    def setStatus(self, newStatus):
-        self.hasBeenSeen = newStatus
+    def setName(self, newName: str) -> None:
+        self.name = newName
     
+    def setSeen(self, isSeen: bool) -> None:
+        self.seen = isSeen
