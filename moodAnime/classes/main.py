@@ -12,7 +12,7 @@ animeList = [Anime("jojo"), Anime("dragonball"), Anime("jjk"), Anime("bunny girl
 # add user function
 def addUser(user: User):
     # mala copia di tutte l'anime list, quindi diventa suo (dell'utente), senza toccare il "main" list
-    user.setList(animeList.copy)
+    user.setList(animeList.copy())
     # aggiunto l'user con una nuova lista vuota
     userList.append(user)
 
@@ -25,6 +25,12 @@ def displayUserList():
     for user in userList:
         print(user)
 
-addUser(User(uuid.uuid4, "giorgio"))
+u1 = User("Giorgio")
+u2 = User("Giacomo")
+
+addUser(u1)
+addUser(u2)
 displayUserList()
-print(userList[0].getList())
+
+u2.setSeen("jojo")
+displayUserList()
