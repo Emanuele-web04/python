@@ -40,8 +40,6 @@ class User:
             self.liAnime[i].setSeen(True)
 
     def appendAnime(self, newAnime: Anime):
-        if not isinstance(newAnime, Anime):
-            return
         self.liAnime.append(newAnime)
 
     def __str__(self) -> str:
